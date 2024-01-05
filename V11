@@ -1,0 +1,209 @@
+
+
+local Players = game:GetService("Players")
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+local TweenService = game:GetService("TweenService")
+ 
+ 
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+ 
+print("Service Successful")
+ 
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.IgnoreGuiInset = true
+ScreenGui.Parent = playerGui
+ 
+print("ScreenGui Successful")
+ 
+local frame = Instance.new("Frame")
+frame.Parent = ScreenGui
+frame.Size = UDim2.new(1,0,1,0)
+frame.BackgroundTransparency = 0
+frame.BackgroundColor3 = Color3.fromRGB(0,20,40)
+ 
+print("frame Successful")
+ 
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1,0,1,0)
+textLabel.BackgroundColor3 = Color3.fromRGB(0,20,40)
+textLabel.Font = Enum.Font.GothamBold
+textLabel.TextColor3 = Color3.new(.8,.8,.8)
+textLabel.Text = "Hyperion v1"
+textLabel.TextSize = 28
+textLabel.Parent = frame
+ 
+print("TextLabel Successful")
+ 
+local loadingRing = Instance.new("ImageLabel")
+loadingRing.Size = UDim2.new(0,256,0,256)
+loadingRing.BackgroundTransparency = 1
+loadingRing.Image = "rbxassetid://4965945816"
+loadingRing.AnchorPoint = Vector2.new(0.5,0.5)
+loadingRing.Position = UDim2.new(0.5,0,0.5,0)
+loadingRing.Parent = frame
+ 
+print("LoadingRing Successful")
+ 
+ReplicatedFirst:RemoveDefaultLoadingScreen()
+ 
+print("Remove Deafult loading screen Unsuccessful")
+ 
+local tweenInfo = TweenInfo.new(4,Enum.EasingStyle.Linear,Enum.EasingDirection.In,-1)
+local tween = TweenService:Create(loadingRing,tweenInfo,{Rotation = 360})
+ 
+print("TweenService Successful")
+ 
+tween:Play()
+ 
+wait(5)
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+ 
+loadingRing.Visible = false
+frame:TweenPosition(UDim2.new(0,0,1,0),"InOut","Sine",2)
+wait(2)
+ScreenGui:Destroy()
+ 
+print("Loaded LoadingScreen")
+print("Script Successful")
+
+-------------------script-------------------
+
+local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+
+local Library = DarkraiX:Window("Hyperion v1","","",Enum.KeyCode.RightControl);
+
+Tab1 = Library:Tab("Main")
+
+Tab1:Seperator("Auto Parry Section")
+
+Tab1:Button("Auto Parry v1",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
+    print("Thank you")
+end)
+
+Tab1:Button("Auto Parry v2",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
+    print("Dang")
+end)
+
+Tab1:Button("Auto parry v3",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Code4Zaaa/X7Project/main/Game/AutoParryOnly"))()
+    print("Alr🗿")
+end)
+
+Tab1:Seperator("Visual Section")
+
+Tab1:Button("Esp",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Fsploitrady/main/Hi"))()
+    print("Alr🗿")
+end)
+
+Tab1:Button("Fps Booster",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/eHEfAR8z", true))()
+    print("Alr🗿")
+end)
+
+Tab1:Toggle("Phonk Music",false,function(value)
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1
+notifSound.Volume = 0.35
+notifSound.SoundId = "rbxassetid://1839246711"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+
+print(value)
+    end)
+
+Tab1:Seperator("Other Script's")
+
+Tab1:Button("Pie X",function()
+loadstring(game:HttpGet("https://pastefy.app/yD8uwvja/raw"))()
+    print("Alr🗿")
+end)
+
+Tab1:Button("Fsploit's Blade ball",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Lol-lsl/main/Hosvile-With-Ui%3F-Fsploit-Remake"))()
+    print("Alr🗿")
+end)
+
+Tab1 = Library:Tab("Settings")
+
+Tab1:Seperator("Player Settings")
+
+Tab1:Button("Fov 150",function()
+local FovNumber = 150 --Enter your FOV number here
+local Camera = workspace.CurrentCamera
+Camera.FieldOfView = FovNumber
+    print("Alr🗿")
+end)
+
+Tab1:Button("Jump power 50",function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    print("Alr🗿")
+end)
+
+Tab1:Button("Walkspeed 50",function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    print("Alr🗿")
+end)
+
+Tab1:Toggle("Rejoin",false,function(value)
+local ts = game:GetService("TeleportService")
+				local p = game:GetService("Players").LocalPlayer
+				ts:Teleport(game.PlaceId, p)
+print(value)
+    end)
+
+Tab1:Textbox("Reminder textbox","",true,function(value)
+print(value)
+end)
+
+Tab1 = Library:Tab("Info")
+
+Tab1:Seperator("Made by Fsploit")
+
+Tab1:Seperator("Developer's team")
+
+Tab1:Seperator("Bl429 aka Blaze")
+
+Tab1:Seperator("Robin1v1")
+
+Tab1:Seperator("Vien he gud")
+
+Tab1:Seperator("New update 2/22/24")
+
+Tab1:Seperator("Lol")
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1
+notifSound.Volume = 0.35
+notifSound.SoundId = "rbxassetid://1167155503"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+
+Notification.Notify("Hyperion!", "Thanks for using Hyperion (Blade ball)",  {
+    Duration = 6,       
+    Main = {
+        Rounding = true,
+    }
+});
+ wait(2)
+Notification.Notify("Hyperion!", "Developers:-Blxze, FSploit, Robin and vien",  {
+    Duration = 7,       
+    Main = {
+        Rounding = true,
+    }
+});
+wait(2)
+Notification.Notify("Hyperion!", "Top 1 Hyperion!1!1!",  {
+    Duration = 7,       
+    Main = {
+        Rounding = true,
+    }
+});
