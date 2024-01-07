@@ -79,20 +79,20 @@ Tab1 = Library:Tab("Main")
 
 Tab1:Seperator("Auto Parry Section")
 
-Tab1:Button("Auto Parry v1",function()
+Tab1:Toggle("Auto parry 1 for Pc",false,function(value)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
-    print("Thank you")
-end)
+print(value)
+    end)
 
-Tab1:Button("Auto Parry v2",function()
+Tab1:Toggle("Auto parry 2 for High ping",false,function(value)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
-    print("Dang")
-end)
+print(value)
+    end)
 
-Tab1:Button("Auto parry v3",function()
+Tab1:Toggle("Auto parry 3 for high/low Ping",false,function(value)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Code4Zaaa/X7Project/main/Game/AutoParryOnly"))()
-    print("Alr🗿")
-end)
+print(value)
+    end)
 
 Tab1:Seperator("Visual Section")
 
@@ -111,7 +111,7 @@ Tab1:Toggle("Phonk Music",false,function(value)
 local notifSound = Instance.new("Sound",workspace)
 notifSound.PlaybackSpeed = 1
 notifSound.Volume = 0.35
-notifSound.SoundId = "rbxassetid://1839246711"
+notifSound.SoundId = "rbxassetid://14145621151"
 notifSound.PlayOnRemove = true
 notifSound:Destroy()
 
