@@ -77,20 +77,16 @@ local Library = DarkraiX:Window("Hyperion v1","","",Enum.KeyCode.RightControl);
 
 Tab1 = Library:Tab("Main")
 
-Tab1:Seperator("Auto Parry Section")
+Tab1:Seperator("Main Section")
 
-Tab1:Toggle("Auto parry 1 for Pc",false,function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
+
+Tab1:Toggle("Auto parry v1",false,function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Parry/main/auto",true))()
 print(value)
     end)
 
-Tab1:Toggle("Auto parry 2 for High ping",false,function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
-print(value)
-    end)
-
-Tab1:Toggle("Auto parry 3 for high/low Ping",false,function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Code4Zaaa/X7Project/main/Game/AutoParryOnly"))()
+Tab1:Toggle("Manual Spam v1 ",false,function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Auto-spam/main/Manual-spam"))()
 print(value)
     end)
 
